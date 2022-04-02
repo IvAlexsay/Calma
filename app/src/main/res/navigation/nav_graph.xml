@@ -7,30 +7,28 @@
 
     <fragment
         android:id="@+id/time_settings"
-        android:name="ivakin.first.my_first_app.time_settings"
+        android:name="ivakin.first.my_first_app.TimeSettings"
         android:label="fragment_time_settings"
         tools:layout="@layout/fragment_time_settings" />
     <fragment
         android:id="@+id/theme_settings"
-        android:name="ivakin.first.my_first_app.theme_settings"
+        android:name="ivakin.first.my_first_app.ThemeSettings"
         android:label="fragment_theme_settings"
         tools:layout="@layout/fragment_theme_settings" />
     <fragment
         android:id="@+id/breathe_exercise"
-        android:name="ivakin.first.my_first_app.breathe_exercise"
+        android:name="ivakin.first.my_first_app.BreathExercise"
         android:label="fragment_breathe_exercise"
         tools:layout="@layout/fragment_breathe_exercise" />
     <fragment
         android:id="@+id/start_screen"
-        android:name="ivakin.first.my_first_app.start_screen"
+        android:name="ivakin.first.my_first_app.StartScreen"
         android:label="fragment_start_screen"
         tools:layout="@layout/fragment_start_screen">
+
         <action
             android:id="@+id/action_start_screen_to_time_settings"
             app:destination="@id/time_settings" />
-        <action
-            android:id="@+id/action_start_screen_to_theme_settings"
-            app:destination="@id/theme_settings" />
         <action
             android:id="@+id/action_start_screen_to_breathe_exercise"
             app:destination="@id/breathe_exercise" />
