@@ -6,18 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
 
+
 class StartScreen : Fragment() {
-    //val timeDataViewModel = TimeDataViewModel()
-    //val binding: FragmentStartScreenBinding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        //val timeData = TimeData(4, 7, 8, 4)
         val view = inflater.inflate(R.layout.fragment_start_screen, container, false)
 
         view.findViewById<Button>(R.id.play_btn).setOnClickListener {
