@@ -1,13 +1,219 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TimeSettings">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <TableLayout
+        android:id="@+id/tableLayout_inhale"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tableRow"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_inhale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inhale: 0 sec"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableRow7">
+
+            <Button
+                android:id="@+id/button_inhale_reduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="34sp"
+                tools:layout_conversion_absoluteHeight="84dp"
+                tools:layout_conversion_absoluteWidth="88dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="64dp" />
+
+            <Button
+                android:id="@+id/button_inhale_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="34sp"
+                tools:layout_conversion_absoluteHeight="84dp"
+                tools:layout_conversion_absoluteWidth="88dp"
+                tools:layout_editor_absoluteX="88dp"
+                tools:layout_editor_absoluteY="64dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout_delay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout_inhale">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tableRow4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_delay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delay: 0 sec"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_delay_reduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/button_delay_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="34sp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout_exhale"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout_delay">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tableRow5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView_exhale"
+            app:layout_constraintStart_toEndOf="@+id/textView_exhale">
+
+            <TextView
+                android:id="@+id/textView_exhale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Exhale: 0 sec"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_exhale_reduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/button_exhale_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="34sp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout_cycles"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout_exhale">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tableRow6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView_cycles"
+            app:layout_constraintStart_toEndOf="@+id/textView_cycles">
+
+            <TextView
+                android:id="@+id/textView_cycles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cycles count: 0"
+                android:textSize="34sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button_cycles_reduce"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textSize="34sp" />
+
+            <Button
+                android:id="@+id/button_cycles_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textSize="34sp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/button_apply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

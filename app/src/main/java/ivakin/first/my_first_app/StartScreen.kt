@@ -18,8 +18,7 @@ class StartScreen : Fragment() {
         val view = inflater.inflate(R.layout.fragment_start_screen, container, false)
 
         view.findViewById<Button>(R.id.play_btn).setOnClickListener {
-            Navigation.findNavController(view)
-                .navigate(R.id.action_start_screen_to_breathe_exercise)
+            Navigation.findNavController(view).navigate(R.id.action_start_screen_to_breathe_exercise)
         }
         view.findViewById<Button>(R.id.leaderboard_btn).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_start_screen_to_time_settings)
