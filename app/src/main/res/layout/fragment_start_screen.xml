@@ -6,72 +6,89 @@
     android:id="@+id/title_constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/blue"
     tools:context="StartScreen"
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
-        android:id="@+id/game_title"
+        android:id="@+id/start_text"
         android:layout_width="368dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:gravity="center_horizontal"
+        android:layout_height="100dp"
+        android:layout_marginTop="140dp"
+        android:gravity="center"
         android:text="@string/trivia"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Headline"
         android:textColor="@color/colorAccent"
-        android:textSize="62sp"
+        android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/title_image"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/play_btn"
-        style="@style/Widget.AppCompat.Button.Borderless"
-        android:layout_width="144dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/rounded_button"
-        android:text="@string/play"
-        android:textColor="@color/colorAccent"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/leaderboard_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title_image" />
-
-    <ImageView
-        android:id="@+id/title_image"
-        android:layout_width="362dp"
-        android:layout_height="225dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
+    <ImageButton
+        android:id="@+id/start_button"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="8dp"
+        android:background="@color/blue"
+        android:contentDescription="@string/todo"
         android:scaleType="centerCrop"
-        android:src="@drawable/image_category_entertainment_raster"
-        app:layout_constraintBottom_toTopOf="@+id/play_btn"
+        android:src="@drawable/ic_flower"
+        app:layout_constraintBottom_toTopOf="@+id/text_inhale"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_title" />
+        app:layout_constraintTop_toBottomOf="@+id/start_text"
+        app:layout_constraintVertical_bias="0.175" />
 
     <Button
-        android:id="@+id/leaderboard_btn"
-        style="@style/Widget.AppCompat.Button.Borderless"
+        android:id="@+id/time_settings_btn"
         android:layout_width="wrap_content"
-        android:layout_height="42dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/leaderboards"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
         android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/play_btn" />
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_hold"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="@string/none"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/text_exhale"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_exhale"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="@string/none"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_inhale"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="@string/none"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/text_hold"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_loops"
+        android:layout_width="80dp"
+        android:layout_height="160dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/none"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

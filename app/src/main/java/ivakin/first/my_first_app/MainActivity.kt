@@ -1,6 +1,7 @@
 package ivakin.first.my_first_app
 
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 
