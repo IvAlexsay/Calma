@@ -19,7 +19,11 @@
         android:id="@+id/breathe_exercise"
         android:name="ivakin.first.my_first_app.BreathExercise"
         android:label="fragment_breathe_exercise"
-        tools:layout="@layout/fragment_breathe_exercise" />
+        tools:layout="@layout/fragment_breathe_exercise" >
+        <action
+            android:id="@+id/action_breathe_exercise_to_start_screen"
+            app:destination="@id/start_screen" />
+    </fragment>
     <fragment
         android:id="@+id/start_screen"
         android:name="ivakin.first.my_first_app.StartScreen"

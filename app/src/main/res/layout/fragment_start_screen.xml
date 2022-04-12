@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue"
-    tools:context="StartScreen"
+    tools:context=".StartScreen"
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
@@ -19,8 +19,7 @@
         android:text="@string/trivia"
         android:textAlignment="center"
         android:textAllCaps="false"
-        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="@color/colorAccent"
+        android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +35,7 @@
         android:background="@color/blue"
         android:contentDescription="@string/todo"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_flower"
+        android:src="@drawable/ic_new_flower2"
         app:layout_constraintBottom_toTopOf="@+id/text_inhale"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -44,11 +43,14 @@
         app:layout_constraintTop_toBottomOf="@+id/start_text"
         app:layout_constraintVertical_bias="0.175" />
 
-    <Button
+    <ImageButton
         android:id="@+id/time_settings_btn"
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        android:src="@drawable/settings"
         android:textColor="@color/colorAccent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -59,6 +61,8 @@
         android:layout_height="80dp"
         android:text="@string/none"
         android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/text_exhale"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -68,6 +72,8 @@
         android:layout_height="80dp"
         android:text="@string/none"
         android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -77,6 +83,8 @@
         android:layout_height="80dp"
         android:text="@string/none"
         android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/text_hold"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -88,6 +96,8 @@
         android:layout_marginBottom="40dp"
         android:text="@string/none"
         android:gravity="center"
+        android:textSize="60sp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
