@@ -34,4 +34,5 @@ object TimeData {
     fun getTotalTime(): Int {
         return (inhale + hold + exhale) * loops
     }
+
 }

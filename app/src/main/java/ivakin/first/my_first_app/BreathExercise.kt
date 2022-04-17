@@ -1,16 +1,13 @@
 package ivakin.first.my_first_app
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import ivakin.first.my_first_app.databinding.FragmentBreatheExerciseBinding
 import android.os.CountDownTimer
-import android.text.format.Time
 import androidx.navigation.Navigation
 
 class BreathExercise : Fragment(R.layout.fragment_breathe_exercise) {
-    private var isWork: Boolean = false
     private var fragmentBreatheExerciseBinding: FragmentBreatheExerciseBinding? = null
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -33,6 +30,7 @@ class BreathExercise : Fragment(R.layout.fragment_breathe_exercise) {
         object : CountDownTimer((totalTime * 1000).toLong(), (totalTimeLoop * 1000).toLong()) {
             var loops = TimeData.loops
             override fun onTick(millisUntilFinished: Long) {
+                loops--
                 binding.textLoops.text = loops.toString()
                 object : CountDownTimer((totalTimeLoop * 1000).toLong(), 1000) {
                     var digits = arrayOf(TimeData.inhale, TimeData.hold, TimeData.exhale)
@@ -57,7 +55,6 @@ class BreathExercise : Fragment(R.layout.fragment_breathe_exercise) {
                     }
                     override fun onFinish() {}
                 }.start()
-                loops--
             }
 
             override fun onFinish() {

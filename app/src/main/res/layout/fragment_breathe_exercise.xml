@@ -32,7 +32,6 @@
         android:layout_margin="8dp"
         android:layout_marginTop="136dp"
         android:background="@color/blue"
-        android:contentDescription="@string/todo"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_new_flower2"
         app:layout_constraintBottom_toBottomOf="parent"
