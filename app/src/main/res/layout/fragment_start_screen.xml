@@ -32,16 +32,16 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_margin="8dp"
+        android:layout_marginBottom="260dp"
         android:background="@color/blue"
         android:contentDescription="@string/todo"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_new_flower2"
-        app:layout_constraintBottom_toTopOf="@+id/text_inhale"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/start_text"
-        app:layout_constraintVertical_bias="0.175" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/time_settings_btn"
@@ -53,7 +53,8 @@
         android:src="@drawable/settings"
         android:textColor="@color/colorAccent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="goToSettings" />
 
     <TextView
         android:id="@+id/text_hold"

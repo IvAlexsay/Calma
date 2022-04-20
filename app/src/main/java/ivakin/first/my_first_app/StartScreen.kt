@@ -7,7 +7,10 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import ivakin.first.my_first_app.databinding.FragmentStartScreenBinding
 import java.io.File
-
+import java.nio.file.Files
+import java.nio.file.Path
+import java.nio.file.Paths
+import java.sql.Time
 
 
 class StartScreen : Fragment(R.layout.fragment_start_screen) {
@@ -34,19 +37,25 @@ class StartScreen : Fragment(R.layout.fragment_start_screen) {
     }
 
     private fun setDefaultSettingsFile(context: Context) {
-        val file = File(context.filesDir, "time_data.txt")
-        if (file.exists()) {
+        val path: Path = Paths.get(context.filesDir.toString(), "time_data.txt")
+        if (Files.exists(path)) {
+            val file = File(path.toString())
             var data = file.readText()
             data = data.substring(0, data.length-1)
             val set = data.split('\n').map{it.toInt()}
             TimeData.setCUSTOM(set[0], set[1], set[2], set[3])
+            TimeData.isVibration = set[4] == 1
+            TimeData.isSound = set[5] == 1
         }
         else{
+            val file = File(path.toString())
             file.printWriter().use { out ->
                 out.println(TimeData.inhale)
                 out.println(TimeData.hold)
                 out.println(TimeData.exhale)
                 out.println(TimeData.loops)
+                out.println(1)
+                out.println(1)
             }
         }
     }

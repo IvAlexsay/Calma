@@ -5,6 +5,16 @@ object TimeData {
     var hold: Int = 7
     var exhale: Int = 8
     var loops: Int = 4
+    var isVibration: Boolean = true;
+    var isSound: Boolean = true;
+
+    fun changeVibration(){
+        isVibration = !isVibration
+    }
+
+    fun changeSound(){
+        isSound = !isSound
+    }
 
     fun setFSE() {
         this.inhale = 4
