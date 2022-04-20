@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_white"
+    tools:context=".settings.screens.ThirdScreen">
+
+
+    <com.shawnlin.numberpicker.NumberPicker
+        android:id="@+id/number_picker_exhale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592"
+
+        app:np_dividerDistance="60dp"
+        app:np_dividerLength="20dp"
+        app:np_height="64dp"
+        app:np_max="20"
+        app:np_min="0"
+        app:np_orientation="horizontal"
+        app:np_textSize="25sp"
+        app:np_width="128dp" />
+
+    <com.shawnlin.numberpicker.NumberPicker
+        android:id="@+id/number_picker_loops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.805"
+
+        app:np_dividerDistance="60dp"
+        app:np_dividerLength="20dp"
+        app:np_height="64dp"
+        app:np_max="20"
+        app:np_min="0"
+        app:np_orientation="horizontal"
+        app:np_textSize="25sp"
+        app:np_width="128dp" />
+
+    <com.shawnlin.numberpicker.NumberPicker
+        android:id="@+id/number_picker_hold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+
+        app:np_dividerDistance="60dp"
+        app:np_dividerLength="20dp"
+        app:np_height="64dp"
+        app:np_max="20"
+        app:np_min="0"
+        app:np_orientation="horizontal"
+        app:np_textSize="25sp"
+        app:np_width="128dp" />
+
+    <com.shawnlin.numberpicker.NumberPicker
+        android:id="@+id/number_picker_inhale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.202"
+
+        app:np_dividerDistance="60dp"
+        app:np_dividerLength="20dp"
+        app:np_height="64dp"
+        app:np_max="20"
+        app:np_min="0"
+        app:np_orientation="horizontal"
+        app:np_textSize="25sp"
+        app:np_width="128dp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custom"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textCustomInhale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Inhale"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/number_picker_inhale"
+        app:layout_constraintEnd_toStartOf="@+id/number_picker_inhale"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/number_picker_inhale" />
+
+    <TextView
+        android:id="@+id/textCustomHold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hold"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/number_picker_hold"
+        app:layout_constraintEnd_toStartOf="@+id/number_picker_hold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/number_picker_hold" />
+
+    <TextView
+        android:id="@+id/textCustomExhale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exhale"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/number_picker_exhale"
+        app:layout_constraintEnd_toStartOf="@+id/number_picker_exhale"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/number_picker_exhale" />
+
+    <TextView
+        android:id="@+id/textCustomLoops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Loops"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/number_picker_loops"
+        app:layout_constraintEnd_toStartOf="@+id/number_picker_loops"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/number_picker_loops" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
