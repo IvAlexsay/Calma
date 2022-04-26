@@ -31,14 +31,13 @@
         android:layout_height="200dp"
         android:layout_margin="8dp"
         android:layout_marginBottom="260dp"
-        android:background="@color/blue"
         android:scaleType="centerCrop"
-        android:src="@drawable/ic_new_flower2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        android:src="@drawable/ic_new_flower2" />
 
     <TextView
         android:id="@+id/text_current_time"

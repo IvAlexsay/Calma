@@ -46,7 +46,7 @@
         app:np_dividerDistance="60dp"
         app:np_dividerLength="20dp"
         app:np_height="64dp"
-        app:np_max="20"
+        app:np_max="10"
         app:np_min="0"
         app:np_orientation="horizontal"
         app:np_textSize="25sp"
