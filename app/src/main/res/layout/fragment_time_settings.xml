@@ -102,4 +102,57 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text=": Inhale"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/text_hold"
+        app:layout_constraintStart_toEndOf="@+id/text_inhale"
+        app:layout_constraintTop_toTopOf="@+id/text_inhale"
+        app:layout_constraintVertical_bias="0.56" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text=": Hold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_hold"
+        app:layout_constraintStart_toEndOf="@+id/text_hold"
+        app:layout_constraintTop_toTopOf="@+id/text_hold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text=": Exhale"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_exhale"
+        app:layout_constraintStart_toEndOf="@+id/text_exhale"
+        app:layout_constraintTop_toBottomOf="@+id/text_hold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="Count\nloops: "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_loops"
+        app:layout_constraintEnd_toStartOf="@+id/text_loops"
+        app:layout_constraintTop_toTopOf="@+id/text_loops" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

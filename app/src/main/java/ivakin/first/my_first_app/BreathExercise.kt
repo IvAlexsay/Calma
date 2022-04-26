@@ -57,7 +57,7 @@ class BreathExercise : Fragment(R.layout.fragment_breathe_exercise) {
     private fun cycle(binding: FragmentBreatheExerciseBinding) {
         val totalTime = TimeData.getTotalTime()
         val totalTimeLoop = TimeData.getTotalTimeLoop()
-        val texts = arrayOf("Inhale", "Hold", "Exhale")
+        val texts = arrayOf("Inhale through\n your nose", "Hold breathe", "Exhale through\n your mouth")
         val vibrator = activity?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         val flower = binding.flower
         binding.textLoops.text = TimeData.loops.toString()
