@@ -20,8 +20,8 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        android:textSize="30sp"
+        android:fontFamily="@font/uriallight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +51,6 @@
         android:layout_marginTop="8dp"
         android:background="@null"
         android:src="@drawable/settings"
-        android:textColor="@color/colorAccent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:contentDescription="goToSettings" />
@@ -64,6 +63,7 @@
         android:gravity="center"
         android:textSize="30sp"
         android:textColor="@color/black"
+        android:fontFamily="@font/uriallight"
         app:layout_constraintBottom_toTopOf="@+id/text_exhale"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -75,6 +75,7 @@
         android:gravity="center"
         android:textSize="30sp"
         android:textColor="@color/black"
+        android:fontFamily="@font/uriallight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -86,6 +87,7 @@
         android:gravity="center"
         android:textSize="30sp"
         android:textColor="@color/black"
+        android:fontFamily="@font/uriallight"
         app:layout_constraintBottom_toTopOf="@+id/text_hold"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -98,6 +100,7 @@
         android:text="@string/none"
         android:gravity="center"
         android:textSize="60sp"
+        android:fontFamily="@font/uriallight"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

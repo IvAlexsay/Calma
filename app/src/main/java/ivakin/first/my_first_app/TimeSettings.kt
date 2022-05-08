@@ -1,9 +1,9 @@
 package ivakin.first.my_first_app
 
 import android.os.Bundle
-import android.text.format.Time
-import androidx.fragment.app.Fragment
 import android.view.View
+import android.widget.SeekBar
+import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import ivakin.first.my_first_app.databinding.FragmentTimeSettingsBinding
 import ivakin.first.my_first_app.settings.ViewPagerAdapter
@@ -11,6 +11,7 @@ import ivakin.first.my_first_app.settings.screens.FirstScreen
 import ivakin.first.my_first_app.settings.screens.SecondScreen
 import ivakin.first.my_first_app.settings.screens.ThirdScreen
 import java.io.File
+
 
 class TimeSettings : Fragment(R.layout.fragment_time_settings) {
     private var fragmentTimeSettingBinding: FragmentTimeSettingsBinding? = null
@@ -29,6 +30,8 @@ class TimeSettings : Fragment(R.layout.fragment_time_settings) {
             TimeData.changeSound()
             changeSettings()
         }
+        val seekBar = binding.seekBar
+        seekBar.setOnTouchListener { v, event -> true }
         val fragmentList = arrayListOf(
             FirstScreen(),
             SecondScreen(),
@@ -39,8 +42,14 @@ class TimeSettings : Fragment(R.layout.fragment_time_settings) {
             requireActivity().supportFragmentManager,
             lifecycle
         )
-        val viewPager = view.findViewById<ViewPager2>(R.id.viewPager)
+        val viewPager = binding.viewPager
         viewPager.adapter = adapter
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                changeSeekBar()
+                super.onPageSelected(position)
+            }
+        })
     }
 
 
@@ -62,6 +71,13 @@ class TimeSettings : Fragment(R.layout.fragment_time_settings) {
         binding.textHold.text = TimeData.hold.toString()
         binding.textExhale.text = TimeData.exhale.toString()
         binding.textLoops.text = TimeData.loops.toString()
+    }
+
+    fun changeSeekBar() {
+        val number = fragmentTimeSettingBinding?.viewPager?.currentItem
+        if (number != null) {
+            fragmentTimeSettingBinding?.seekBar?.setProgress(number, true)
+        }
     }
 
     override fun onDestroyView() {

@@ -34,7 +34,7 @@ class BreathExercise : Fragment(R.layout.fragment_breathe_exercise) {
             .setAudioAttributes(attributes)
             .setMaxStreams(1)
             .build()
-        mSoundPool.load(activity, R.raw.wow, 1)
+        mSoundPool.load(activity, R.raw.end, 1)
         mSoundPool.load(activity, R.raw.shelck, 1)
 
         setAnimations()
@@ -120,7 +120,9 @@ class BreathExercise : Fragment(R.layout.fragment_breathe_exercise) {
                             }
                         }
 
-                        override fun onFinish() {}
+                        override fun onFinish() {
+                            vibratePhone(vibrator)
+                        }
                     }.start()
                     playSound(2)
                 }
