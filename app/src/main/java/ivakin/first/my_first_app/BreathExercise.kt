@@ -1,21 +1,28 @@
 package ivakin.first.my_first_app
 
+
 import android.content.Context
 import android.media.AudioAttributes
 import android.media.AudioManager
 import android.media.SoundPool
-import android.os.*
+import android.os.Bundle
+import android.os.CountDownTimer
+import android.os.Vibrator
 import android.view.View
+import android.view.animation.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import ivakin.first.my_first_app.databinding.FragmentBreatheExerciseBinding
+
 
 class BreathExercise : Fragment(R.layout.fragment_breathe_exercise) {
     private var fragmentBreatheExerciseBinding: FragmentBreatheExerciseBinding? = null
     private lateinit var timerLoops: CountDownTimer
     private lateinit var timerLoop: CountDownTimer
     private lateinit var mSoundPool: SoundPool
+    private lateinit var animationEnlarge: Animation
+    private lateinit var animationCompression: Animation
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val binding = FragmentBreatheExerciseBinding.bind(view)
@@ -27,8 +34,11 @@ class BreathExercise : Fragment(R.layout.fragment_breathe_exercise) {
             .setAudioAttributes(attributes)
             .setMaxStreams(1)
             .build()
-        mSoundPool.load(activity, R.raw.wow, 1)
+        mSoundPool.load(activity, R.raw.end, 1)
         mSoundPool.load(activity, R.raw.shelck, 1)
+
+        setAnimations()
+
         cycle(binding)
         binding.endButton.setOnClickListener {
             Navigation.findNavController(view)
@@ -36,21 +46,40 @@ class BreathExercise : Fragment(R.layout.fragment_breathe_exercise) {
         }
     }
 
+    private fun setAnimations() {
+        animationEnlarge = AnimationUtils.loadAnimation(activity, R.anim.enlarge)
+        animationCompression = AnimationUtils.loadAnimation(activity, R.anim.compression)
+        animationEnlarge.duration = (TimeData.inhale * 1000).toLong()
+        animationCompression.startOffset = (TimeData.hold * 1000).toLong()
+        animationCompression.duration = (TimeData.exhale * 1000).toLong()
+    }
+
     private fun cycle(binding: FragmentBreatheExerciseBinding) {
         val totalTime = TimeData.getTotalTime()
         val totalTimeLoop = TimeData.getTotalTimeLoop()
-        val texts = arrayOf("Inhale", "Hold", "Exhale")
+        val texts = arrayOf("Inhale through\n your nose", "Hold breathe", "Exhale through\n your mouth")
         val vibrator = activity?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
-
+        val flower = binding.flower
         binding.textLoops.text = TimeData.loops.toString()
         binding.textCurrentTime.text = TimeData.inhale.toString()
         binding.declarates.text = texts[0]
+        animationEnlarge.setAnimationListener(object : Animation.AnimationListener {
+            override fun onAnimationStart(p0: Animation?) {}
+
+            override fun onAnimationEnd(p0: Animation?) {
+                flower.startAnimation(animationCompression)
+            }
+
+            override fun onAnimationRepeat(p0: Animation?) {}
+
+        })
         timerLoops =
             object : CountDownTimer((totalTime * 1000).toLong(), (totalTimeLoop * 1000).toLong()) {
                 var loops = TimeData.loops
                 override fun onTick(millisUntilFinished: Long) {
                     loops--
                     binding.textLoops.text = loops.toString()
+                    flower.startAnimation(animationEnlarge)
                     timerLoop = object : CountDownTimer((totalTimeLoop * 1000).toLong(), 1000) {
                         var digits = arrayOf(TimeData.inhale, TimeData.hold, TimeData.exhale)
                         override fun onTick(p0: Long) {
@@ -91,7 +120,9 @@ class BreathExercise : Fragment(R.layout.fragment_breathe_exercise) {
                             }
                         }
 
-                        override fun onFinish() {}
+                        override fun onFinish() {
+                            vibratePhone(vibrator)
+                        }
                     }.start()
                     playSound(2)
                 }
@@ -102,6 +133,7 @@ class BreathExercise : Fragment(R.layout.fragment_breathe_exercise) {
                     binding.textCurrentTime.text = "0"
                     binding.textLoops.text = "0"
                     binding.endButton.visibility = View.VISIBLE
+                    flower.animation = null
                 }
             }.start()
     }

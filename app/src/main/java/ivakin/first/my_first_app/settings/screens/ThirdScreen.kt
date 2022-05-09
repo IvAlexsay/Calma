@@ -31,7 +31,6 @@ class ThirdScreen : Fragment(R.layout.fragment_third_screen) {
             timeSettings.changeSettings()
         }
     }
-
     fun setSetiings(binding: FragmentThirdScreenBinding){
         binding.numberPickerInhale.value = TimeData.inhale
         binding.numberPickerHold.value = TimeData.hold

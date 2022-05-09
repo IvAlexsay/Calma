@@ -17,8 +17,8 @@
         android:text="Vibration"
         android:textAlignment="center"
         android:textSize="30sp"
-        app:thumbTint="@color/orange"
-        app:trackTint="@color/purple"
+        android:fontFamily="@font/uriallight"
+        android:theme="@style/MySwitch"
         app:layout_constraintBottom_toTopOf="@+id/viewPager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -31,12 +31,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="160dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="250dp"
+        android:layout_marginBottom="270dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/soundSwitch"
@@ -47,8 +48,8 @@
         android:text="Sound"
         android:textAlignment="center"
         android:textSize="30sp"
-        app:thumbTint="@color/orange"
-        app:trackTint="@color/purple"
+        android:fontFamily="@font/uriallight"
+        android:theme="@style/MySwitch"
         app:layout_constraintBottom_toTopOf="@+id/vibrationSwitch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -64,6 +65,7 @@
         android:gravity="center"
         android:textSize="30sp"
         android:textColor="@color/black"
+        android:fontFamily="@font/uriallight"
         app:layout_constraintBottom_toTopOf="@+id/text_exhale"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -75,6 +77,7 @@
         android:gravity="center"
         android:textSize="30sp"
         android:textColor="@color/black"
+        android:fontFamily="@font/uriallight"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -86,6 +89,7 @@
         android:gravity="center"
         android:textSize="30sp"
         android:textColor="@color/black"
+        android:fontFamily="@font/uriallight"
         app:layout_constraintBottom_toTopOf="@+id/text_hold"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -98,8 +102,80 @@
         android:text="@string/none"
         android:gravity="center"
         android:textSize="60sp"
+        android:fontFamily="@font/uriallight"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text=": Inhale"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:fontFamily="@font/uriallight"
+        app:layout_constraintBottom_toTopOf="@+id/text_hold"
+        app:layout_constraintStart_toEndOf="@+id/text_inhale"
+        app:layout_constraintTop_toTopOf="@+id/text_inhale"
+        app:layout_constraintVertical_bias="0.56" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text=": Hold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:fontFamily="@font/uriallight"
+        app:layout_constraintBottom_toBottomOf="@+id/text_hold"
+        app:layout_constraintStart_toEndOf="@+id/text_hold"
+        app:layout_constraintTop_toTopOf="@+id/text_hold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center"
+        android:text=": Exhale"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:fontFamily="@font/uriallight"
+        app:layout_constraintBottom_toBottomOf="@+id/text_exhale"
+        app:layout_constraintStart_toEndOf="@+id/text_exhale"
+        app:layout_constraintTop_toBottomOf="@+id/text_hold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:text="Count\nloops: "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:fontFamily="@font/uriallight"
+        app:layout_constraintBottom_toBottomOf="@+id/text_loops"
+        app:layout_constraintEnd_toStartOf="@+id/text_loops"
+        app:layout_constraintTop_toTopOf="@+id/text_loops" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:theme="@style/MySwitch"
+        android:layout_width="113dp"
+        android:layout_height="34dp"
+        android:max="2"
+        android:progress="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewPager"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewTreeObserver
 import androidx.navigation.fragment.NavHostFragment
 import ivakin.first.my_first_app.R
 import ivakin.first.my_first_app.TimeData
