@@ -2,13 +2,13 @@ package ivakin.first.my_first_app
 
 import android.os.Bundle
 import android.view.View
-import android.widget.SeekBar
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
 import ivakin.first.my_first_app.databinding.FragmentTimeSettingsBinding
 import ivakin.first.my_first_app.settings.ViewPagerAdapter
 import ivakin.first.my_first_app.settings.screens.FirstScreen
 import ivakin.first.my_first_app.settings.screens.SecondScreen
+import ivakin.first.my_first_app.settings.screens.FourthScreen
 import ivakin.first.my_first_app.settings.screens.ThirdScreen
 import java.io.File
 
@@ -35,7 +35,8 @@ class TimeSettings : Fragment(R.layout.fragment_time_settings) {
         val fragmentList = arrayListOf(
             FirstScreen(),
             SecondScreen(),
-            ThirdScreen()
+            ThirdScreen(),
+            FourthScreen()
         )
         val adapter = ViewPagerAdapter(
             fragmentList,
