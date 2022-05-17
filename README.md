@@ -30,6 +30,7 @@
     - Animations & Transitions - Move widgets and transition between screens.
     - Fragment - A basic unit of composable UI.
     - Layout - Lay out widgets using different algorithms.
+    - NumberPicker - specil widget for pick number bu slide screen(https://github.com/ShawnLin013/NumberPicker).
 ## Contributors
 - [Ивакин Алексей](https://github.com/IvAlexsay)
 - [Редченко Евгений](https://github.com/Nutsheil)
