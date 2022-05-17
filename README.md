@@ -4,7 +4,7 @@
 Приложение включает в себя возможность проведения дыхательного упражнения с нативными указаниями, 
 а также возможность настройки упражнения и сохранения последней настройки.
 ## Screenshots
-<img src="main/screenshots/1.jpg" width="200">
+<img src="https://github.com/IvAlexsay/Calma/blob/main/screenshots/1.jpg" width="200">
 ![1](https://github.com/IvAlexsay/Calma/blob/main/screenshots/1.jpg "1")
 ![2](https://github.com/IvAlexsay/Calma/blob/main/screenshots/2.jpg "2")
 ![3](https://github.com/IvAlexsay/Calma/blob/main/screenshots/3.jpg "3")
