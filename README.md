@@ -4,12 +4,9 @@
 Приложение включает в себя возможность проведения дыхательного упражнения с нативными указаниями, 
 а также возможность настройки упражнения и сохранения последней настройки.
 ## Screenshots
-Стартовый экран
-<img src="https://github.com/IvAlexsay/Calma/blob/main/screenshots/1.jpg" width="200">
-Экран настроек
-<img src="https://github.com/IvAlexsay/Calma/blob/main/screenshots/2.jpg" width="200">
-Экран упражнения
-<img src="https://github.com/IvAlexsay/Calma/blob/main/screenshots/3.jpg" width="200">
+- Стартовый экран <img src="https://github.com/IvAlexsay/Calma/blob/main/screenshots/1.jpg" width="200">
+- Экран настроек <img src="https://github.com/IvAlexsay/Calma/blob/main/screenshots/2.jpg" width="200">
+- Экран упражнения <img src="https://github.com/IvAlexsay/Calma/blob/main/screenshots/3.jpg" width="200">
 ## Library Used
 - Foundation - Components for core system capabilities, Kotlin extensions and support for multidex and automated testing.
     - AppCompat - Degrade gracefully on older versions of Android.
