@@ -1,36 +1,14 @@
-# Calma
-Данный репозиторий создан в рамках реализации проекта по созданию мобильного приложения для дыхательных упражнений.
+# Классы приложения
 
-Приложение включает в себя возможность проведения дыхательного упражнения с нативными указаниями, 
-а также возможность настройки упражнения и сохранения последней настройки.
-## Screenshots
-- Стартовый экран 
-    - <img src="https://github.com/IvAlexsay/Calma/blob/main/screenshots/1.jpg" width="200">
-- Экран настроек 
-    - <img src="https://github.com/IvAlexsay/Calma/blob/main/screenshots/2.jpg" width="200">
-- Экран упражнения 
-    - <img src="https://github.com/IvAlexsay/Calma/blob/main/screenshots/3.jpg" width="200">
-## Features
-- Анимированное изображение во время упражнения, указывающие текущее дествие(расширение -> вдох, статитичность -> задержка дыхания, сужение -> выдох).
-- Меняющиеся текстовые директивы(Вдох, задержка, выдох).
-- Вибрация и звук при смене текущего действия. Предусмотрено отключение данных средств в настройках.
-- Возможность выбора готовой настройки упражнения, либо задания собственной через интуитивно понятный интерфейс в настройках.
-- Темная тема, синхронизированная с системой.
-## Library Used
-- Foundation - Components for core system capabilities, Kotlin extensions and support for multidex and automated testing.
-    - AppCompat - Degrade gracefully on older versions of Android.
-    - Android KTX - Write more concise, idiomatic Kotlin code.
-- Architecture - A collection of libraries that help you design robust, testable, and maintainable apps. Start with classes for managing your UI component lifecycle and handling data persistence.
-    - View Binding - Declaratively bind observable data to UI elements.
-    - Lifecycles - Create a UI that automatically responds to lifecycle events.
-    - Navigation - Handle everything needed for in-app navigation.
-    - ViewModel - Store UI-related data that isn't destroyed on app rotations. Easily schedule asynchronous tasks for optimal execution.
-    - WorkManager - Manage your Android background jobs.
-- UI - Details on why and how to use UI Components in your apps - together or separate
-    - Animations & Transitions - Move widgets and transition between screens.
-    - Fragment - A basic unit of composable UI.
-    - Layout - Lay out widgets using different algorithms.
-    - NumberPicker - specil widget for pick number bu slide screen(https://github.com/ShawnLin013/NumberPicker).
-## Contributors
-- [Ивакин Алексей](https://github.com/IvAlexsay)
-- [Редченко Евгений](https://github.com/Nutsheil)
+Данное приложение написано для Android на языке Kotlin. Оно содержит 5 классов: MainActivity, StartScreen, TimeSettings, BreathExercise и TimeData.
+
+Класс MainActivity является системным классом, с которого начинается запуск приложения. Его единственная задача состоит в том, что он перенаправляет пользователя на стартовый экран.
+
+Класс StartScreen служит основным экраном приложения, который содержит кнопку перехода в настройки и кнопку запуска, а так же отображает текущие настройки дыхательного упражнения. Так же в этом классе происходит считывание настроек из файла.
+
+Класс TimeSettings обрабатывает изменения в настройках приложения, а именно: выключение и выключение звука и вибрации, изменения параметров упражнения (время вдоха, задержки дыхания, выдоха и количества циклов). Так же в этом классе производится запись измененных настроек в файл.
+
+Класс BreathExercise запускает таймер дыхательного упражнения с текущими настройками, а так же воспроизводит звук и вибрацию по завершению каждой части упражнения.
+
+Класс TimeData хранит все настройки приложения, а именно: время вдоха, задержки дыхания и выдоха, количество циклов, включен ли звук и вибрация.
+
