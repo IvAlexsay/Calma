@@ -67,20 +67,20 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/end_button"
-        style="@style/Widget.AppCompat.ActionButton"
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:background="@color/purple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/uriallight"
-        android:text="END"
-        android:visibility="invisible"
+        android:text="@string/end"
+        android:textColor="@color/black"
+        android:theme="@style/MyButton"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/text_loops"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.508"
         app:layout_constraintStart_toEndOf="@+id/text_current_time"
         app:layout_constraintTop_toBottomOf="@+id/flower"
-        app:layout_constraintVertical_bias="0.791" />
+        app:layout_constraintVertical_bias="0.813" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

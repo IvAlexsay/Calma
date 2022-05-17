@@ -10,4 +10,8 @@
         <!-- цвет дорожки для неактивного состояния (30% прозрачности) -->
         <item name="android:colorForeground">@color/purple</item>
     </style>
+    <style name="MyButton" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="colorControlHighlight">@color/orange</item>
+        <item name="colorAccent">@color/yellow</item>
+    </style>
 </resources>
