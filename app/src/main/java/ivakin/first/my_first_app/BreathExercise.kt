@@ -58,6 +58,7 @@ class BreathExercise : Fragment(R.layout.fragment_breathe_exercise) {
         val totalTime = TimeData.getTotalTime()
         val totalTimeLoop = TimeData.getTotalTimeLoop()
         val texts = arrayOf("Inhale through\n your nose", "Hold breathe", "Exhale through\n your mouth")
+        val finish = "Finish"
         val vibrator = activity?.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
         val flower = binding.flower
         binding.textLoops.text = TimeData.loops.toString()
@@ -129,7 +130,7 @@ class BreathExercise : Fragment(R.layout.fragment_breathe_exercise) {
 
                 override fun onFinish() {
                     playSound(1)
-                    binding.declarates.text = "Finish"
+                    binding.declarates.text = finish
                     binding.textCurrentTime.text = "0"
                     binding.textLoops.text = "0"
                     binding.endButton.visibility = View.VISIBLE
