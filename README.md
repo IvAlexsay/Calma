@@ -10,6 +10,12 @@
     - <img src="https://github.com/IvAlexsay/Calma/blob/main/screenshots/2.jpg" width="200">
 - Экран упражнения 
     - <img src="https://github.com/IvAlexsay/Calma/blob/main/screenshots/3.jpg" width="200">
+## Features
+- Анимированное изображение во время упражнения, указывающие текущее дествие(расширение -> вдох, статитичность -> задержка дыхания, сужение -> выдох).
+- Меняющиеся текстовые директивы(Вдох, задержка, выдох).
+- Вибрация и звук при смене текущего действия. Предусмотрено отключение данных средств в настройках.
+- Возможность выбора готовой настройки упражнения, либо задания собственной через интуитивно понятный интерфейс в настройках.
+- Темная тема, синхронизированная с системой.
 ## Library Used
 - Foundation - Components for core system capabilities, Kotlin extensions and support for multidex and automated testing.
     - AppCompat - Degrade gracefully on older versions of Android.
@@ -24,7 +30,6 @@
     - Animations & Transitions - Move widgets and transition between screens.
     - Fragment - A basic unit of composable UI.
     - Layout - Lay out widgets using different algorithms.
-
 ## Contributors
 - [Ивакин Алексей](https://github.com/IvAlexsay)
 - [Редченко Евгений](https://github.com/Nutsheil)
