@@ -25,4 +25,8 @@ class FirstScreen : Fragment(R.layout.fragment_first_screen) {
             timeSettings.changeSettings()
         }
     }
+    override fun onDestroyView() {
+        fragmentFirstScreen = null
+        super.onDestroyView()
+    }
 }

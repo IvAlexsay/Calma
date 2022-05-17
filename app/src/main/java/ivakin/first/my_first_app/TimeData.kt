@@ -23,6 +23,13 @@ object TimeData {
         this.loops = 4
     }
 
+    fun setFOF() {
+        this.inhale = 5
+        this.hold = 0
+        this.exhale = 5
+        this.loops = 4
+    }
+
     fun setFFF() {
         this.inhale = 4
         this.hold = 4

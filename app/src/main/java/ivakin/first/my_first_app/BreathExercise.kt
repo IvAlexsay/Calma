@@ -129,7 +129,7 @@ class BreathExercise : Fragment(R.layout.fragment_breathe_exercise) {
 
                 override fun onFinish() {
                     playSound(1)
-                    binding.declarates.text = "Finish"
+                    binding.declarates.text = R.string.finish.toString()
                     binding.textCurrentTime.text = "0"
                     binding.textLoops.text = "0"
                     binding.endButton.visibility = View.VISIBLE
