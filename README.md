@@ -31,6 +31,10 @@
     - Fragment - A basic unit of composable UI.
     - Layout - Lay out widgets using different algorithms.
     - NumberPicker - specil widget for pick number bu slide screen(https://github.com/ShawnLin013/NumberPicker).
+# Table of contents
+* [Классы приложения](README.md)
+* [Экраны приложения](ekrany-prilozheniya.md)
+* [Функционал кнопок приложения](funkcional-knopok-prilozheniya.md)
 ## Contributors
 - [Ивакин Алексей](https://github.com/IvAlexsay)
 - [Редченко Евгений](https://github.com/Nutsheil)
